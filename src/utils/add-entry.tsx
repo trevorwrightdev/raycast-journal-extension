@@ -13,8 +13,8 @@ function addEntry(text: string) {
   const newText = `${currentTime}: ${text}\n`;
 
   if (fs.existsSync(filePath)) {
-    const existingContent = fs.readFileSync(filePath, 'utf-8').replace(/^\n+/, '');
-    fs.writeFileSync(filePath, newText + existingContent);
+    const existingContent = fs.readFileSync(filePath, 'utf-8');
+    fs.writeFileSync(filePath, existingContent + '\n' + newText);
   } else {
     fs.writeFileSync(filePath, newText);
   }
