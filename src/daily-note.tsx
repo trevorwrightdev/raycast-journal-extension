@@ -9,7 +9,7 @@ type Values = {
 
 export default function Command() {
   async function handleSubmit(values: Values) {
-    addEntry(values.entry)
+    addEntry(values.entry, values.tweet)
     if (values.tweet) {
       postTweet(values.entry);
     }

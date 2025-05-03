@@ -3,7 +3,10 @@ import path from 'path';
 
 const pathToFolder = path.join((process.env.HOME || process.env.USERPROFILE)!, 'Documents/Obsidian Vault/Journal');
 
-function addEntry(text: string) {
+function addEntry(text: string, isTweet: boolean) {
+  if (isTweet) {
+    text = `Tweeted - "${text}"`;
+  }
   const today = new Date();
   const formattedDate = today.toISOString().split('T')[0];
   const fileName = `${formattedDate}.md`;
