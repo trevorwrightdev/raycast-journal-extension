@@ -8,7 +8,7 @@ function addEntry(text: string, isTweet: boolean) {
     text = `Tweeted - "${text}"`;
   }
   const today = new Date();
-  const formattedDate = today.toISOString().split('T')[0];
+  const formattedDate = today.toLocaleDateString('en-CA'); // outputs YYYY-MM-DD
   const fileName = `${formattedDate}.md`;
   const filePath = path.join(pathToFolder, fileName);
 
