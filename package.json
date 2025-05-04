@@ -9,7 +9,7 @@
   "commands": [
     {
       "name": "daily-note",
-      "title": "Daily Note",
+      "title": "Jot",
       "subtitle": "Jot down your thoughts.",
       "description": "",
       "mode": "view"
